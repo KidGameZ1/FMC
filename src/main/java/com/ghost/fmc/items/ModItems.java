@@ -13,8 +13,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, FMCMod.MOD_ID);
 
 
-    public static final RegistryObject<Item> ZOMBIE_GEM = ITEMS.register("zombie_gem",
+    public static final RegistryObject<Item> GHOSTS_HORN = ITEMS.register("ghosts_horn",
             () -> new Item(new Item.Properties().stacksTo(16).rarity(Rarity.RARE)));
+
 
     public static void register(IEventBus bus){
         ITEMS.register(bus);

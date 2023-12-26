@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "fmc:item/zombie_gem"
+    "layer0": "fmc:item/ghosts_horn"
   }
 }
