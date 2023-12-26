@@ -13,8 +13,10 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, FMCMod.MOD_ID);
 
 
-    public static final RegistryObject<Item> GHOSTS_HORN = ITEMS.register("ghosts_horn",
+    public static final RegistryObject<Item> STORMITE = ITEMS.register("stormite",
             () -> new Item(new Item.Properties().stacksTo(16).rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> RAW_STORMITE = ITEMS.register("raw_stormite",
+            () -> new Item(new Item.Properties().stacksTo(64).rarity(Rarity.RARE)));
 
 
     public static void register(IEventBus bus){
