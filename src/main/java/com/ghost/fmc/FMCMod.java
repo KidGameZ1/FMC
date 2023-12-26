@@ -1,7 +1,9 @@
 package com.ghost.fmc;
 
+import com.ghost.fmc.items.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,16 +27,16 @@ public class FMCMod {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public FMCMod() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
-
-        // Register ourselves for server and other game events we are interested in
+        bus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
+        ModItems.register(bus);
+
         // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
+        bus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -45,7 +47,9 @@ public class FMCMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.ZOMBIE_GEM);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
