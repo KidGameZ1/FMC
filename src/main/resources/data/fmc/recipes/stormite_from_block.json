@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "stormite",
+  "ingredients": [
+    {
+      "item": "fmc:stormite_block"
+    }
+  ],
+  "result": {
+    "item": "fmc:stormite",
+    "count": 9
+  }
+}
