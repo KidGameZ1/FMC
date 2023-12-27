@@ -1,5 +1,7 @@
 package com.ghost.fmc;
 
+import com.ghost.fmc.block.ModBlocks;
+import com.ghost.fmc.items.ModCreativeModeTabs;
 import com.ghost.fmc.items.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -34,6 +36,8 @@ public class FMCMod {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(bus);
+        ModBlocks.register(bus);
+        ModCreativeModeTabs.register(bus);
 
         // Register the item to a creative tab
         bus.addListener(this::addCreative);
@@ -47,10 +51,13 @@ public class FMCMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.STORMITE);
-            event.accept(ModItems.RAW_STORMITE);
-        }
+//        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+//            event.accept(ModItems.STORMITE);
+//            event.accept(ModItems.RAW_STORMITE);
+//        }
+//        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+//            event.accept(ModBlocks.BLOCK_OF_STORMITE);
+//        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

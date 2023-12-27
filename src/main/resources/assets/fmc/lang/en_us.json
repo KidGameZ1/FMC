@@ -1,4 +1,11 @@
 {
   "item.fmc.stormite": "Stormite",
-  "item.fmc.raw_stormite": "Raw Stormite"
+  "item.fmc.raw_stormite": "Raw Stormite",
+
+  "block.fmc.stormite_block": "Block of Stormite",
+  "block.fmc.deepslate_stormite_ore": "Deepslate Stormite Ore",
+  "block.fmc.stormite_ore": "Stormite Ore",
+
+
+  "creativetab.fmc_tab": "FMC Tab"
 }
