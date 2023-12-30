@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_alexandrite_block": {
+    "has_tempestite_block": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_alexandrite_block",
+      "has_tempestite_block",
       "has_the_recipe"
     ]
   ],

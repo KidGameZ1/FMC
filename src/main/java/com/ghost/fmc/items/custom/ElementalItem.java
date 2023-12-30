@@ -5,33 +5,28 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.crafting.RecipeType;
-import org.jetbrains.annotations.Nullable;
 
-public class ElementalFuelItem extends Item{
-
+public class ElementalItem extends Item {
     private int tierId;
 
     private final ElementalTiers tiers = ElementalTiers.getTierById(tierId);
 
 
+    private final Rarity rarity = tiers.getRarity();
 
-    private final int burnTime = tiers.getBurnTime();
-    public ElementalFuelItem(Properties properties, int tierId) {
+
+
+    public ElementalItem(Properties properties, int tierId) {
         super(properties.rarity(ElementalTiers.getTierById(tierId).getRarity()));
-//        properties.rarity(tiers.getRarity());
-//        this.burnTime = burnTime;
+//        properties.rarity(ElementalTiers.getTierById(tierId).getRarity());
         this.tierId = tierId;
+
     }
 
-    @Override
-    public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
 
-        return this.burnTime;
-    }
 
 //    @Override
 //    public Rarity getRarity(ItemStack pStack) {
-//        return tiers.getRarity();
+//        return rarity;
 //    }
 }

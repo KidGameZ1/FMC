@@ -68,7 +68,7 @@ public class OreFinderItem extends Item {
 //    }
 
     private void outputNotFound(Player player) {
-        player.sendSystemMessage(Component.translatable("item_fmc.ore_finder.no_stormite"));
+        player.sendSystemMessage(Component.translatable("item_fmc.ore_finder.no_tempestite"));
     }
 
     private void outputStormiteCoords(BlockPos below, Player player, Block block) {

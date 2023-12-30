@@ -19,7 +19,7 @@ public class ModTags {
         }
     }
     public static class Blocks{
-        public static final  TagKey<Block> STORMITE_FINDER_VALUABLES = tag("find_stormite");
+        public static final  TagKey<Block> STORMITE_FINDER_VALUABLES = tag("find_tempestite");
 
         public static TagKey<Block> tag(String name){
             return BlockTags.create(new ResourceLocation(FMCMod.MOD_ID,name));

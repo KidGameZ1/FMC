@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private List<ItemLike> STORMITE_SMELTABLES = List.of(ModItems.RAW_TEMPESTITE.get(),
+    private List<ItemLike> TEMPESTITE_SMELTABLES = List.of(ModItems.RAW_TEMPESTITE.get(),
             ModBlocks.TEMPESTITE_ORE.get(),ModBlocks.DEEPSLATE_TEMPESTITE_ORE.get());
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -30,19 +30,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSS")
                 .pattern("SSS")
                 .define('S', ModItems.TEMPESTITE.get())
-                .unlockedBy("has_stormite", inventoryTrigger(ItemPredicate.Builder.item().
+                .unlockedBy("has_tempestite", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.TEMPESTITE.get()).build()))
                 .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TEMPESTITE.get(), 9)
                 .requires(ModBlocks.BLOCK_OF_TEMPESTITE.get())
-                .unlockedBy("has_alexandrite_block",inventoryTrigger(ItemPredicate.Builder.item().
+                .unlockedBy("has_tempestite_block",inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModBlocks.BLOCK_OF_TEMPESTITE.get()).build()))
                 .save(pWriter);
 
 //        nineBlockStorageRecipes(pWriter, RecipeCategory.M);
-        oreSmelting(pWriter, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.TEMPESTITE.get(), 0.25f,200,"stormite");
-        oreBlasting(pWriter, STORMITE_SMELTABLES, RecipeCategory.MISC, ModItems.TEMPESTITE.get(), 0.25f,100,"stormite");
+        oreSmelting(pWriter, TEMPESTITE_SMELTABLES, RecipeCategory.MISC, ModItems.TEMPESTITE.get(), 0.25f,200,"tempestite");
+        oreBlasting(pWriter, TEMPESTITE_SMELTABLES, RecipeCategory.MISC, ModItems.TEMPESTITE.get(), 0.25f,100,"tempestite");
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult,

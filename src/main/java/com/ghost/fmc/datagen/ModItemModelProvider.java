@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.RAW_TEMPESTITE);
         simpleItem(ModItems.TEMPESTITE);
+        simpleItem(ModItems.SYLVANITE);
 
         simpleItem(ModItems.STORM_COAL);
 

@@ -24,19 +24,20 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOCK_OF_TEMPESTITE.get());
                         output.accept(ModBlocks.DEEPSLATE_TEMPESTITE_ORE.get());
                         output.accept(ModBlocks.TEMPESTITE_ORE.get());
-
-                        // Other Items
-//                        output.accept(ModItems.ORE_FINDER.get());
-                        output.accept(ModItems.STORM_COAL.get());
-
-
-
-                        //Blocks
-
-
+                        output.accept(ModItems.SYLVANITE.get());
 
 
                     })).build());
+    public static final RegistryObject<CreativeModeTab> ELEMENTAL_FUELS = CREATIVE_MODE_TABS.register("elemental_fuels",
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.STORM_COAL.get())).title(Component.translatable("creativetab.elemental_fuels")).displayItems(((itemDisplayParameters, output) ->
+            {
+                output.accept(ModItems.STORM_COAL.get());
+            })).build());
+    public static final RegistryObject<CreativeModeTab> ELEMENTAL_TOOLS = CREATIVE_MODE_TABS.register("elemental_tools",
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.TEMPESTITE_SWORD.get())).title(Component.translatable("creativetab.elemental_tools")).displayItems(((itemDisplayParameters, output) ->
+            {
+                output.accept(ModItems.TEMPESTITE_SWORD.get());
+            })).build());
 
 
 
