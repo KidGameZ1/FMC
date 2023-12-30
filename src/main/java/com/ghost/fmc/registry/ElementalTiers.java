@@ -9,7 +9,8 @@ public enum ElementalTiers {
     STORMS(0,"storm", ModItems.TEMPESTITE.get(),200, 2,2, Rarity.create("storm", ChatFormatting.DARK_AQUA)),
     FLAMES(1,"flames", ModItems.TEMPESTITE.get(),600,2,2,Rarity.create("flames",ChatFormatting.DARK_RED)),
     FROST(2,"frost", ModItems.TEMPESTITE.get(),100,2,2,Rarity.create("frost", ChatFormatting.AQUA)),
-    FORESTS(3,"forest", ModItems.SYLVANITE.get(),100,2,2,Rarity.create("forest",ChatFormatting.DARK_GREEN));
+    HYDRO(3,"hydro",ModItems.TEMPESTITE.get(),0,2,2,Rarity.create("hydro", ChatFormatting.DARK_BLUE)),
+    FORESTS(4,"forest", ModItems.SYLVANITE.get(),100,2,2,Rarity.create("forest",ChatFormatting.DARK_GREEN));
     private final int tierId;
     private final String tierName;
     private final ItemLike item;

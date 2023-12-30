@@ -19,12 +19,12 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> RAW_TEMPESTITE = ITEMS.register("raw_tempestite",
-            () -> new ElementalItem(new Item.Properties().stacksTo(64),0));
+            () -> new ElementalItem(new Item.Properties(),0));
 
     public static final RegistryObject<Item> TEMPESTITE = ITEMS.register("tempestite",
-            () -> new ElementalItem(new Item.Properties().stacksTo(64),0));
+            () -> new ElementalItem(new Item.Properties(),0));
     public static final RegistryObject<Item> SYLVANITE = ITEMS.register("sylvanite",
-            ()-> new ElementalItem(new Item.Properties().stacksTo(64),3));
+            ()-> new ElementalItem(new Item.Properties(),4));
     public static final RegistryObject<Item> STORM_COAL = ITEMS.register("storm_coal",
             () -> new ElementalFuelItem(new Item.Properties(), 0));
     public static final RegistryObject<Item> TEMPESTITE_SWORD = ITEMS.register("tempestite_sword",
