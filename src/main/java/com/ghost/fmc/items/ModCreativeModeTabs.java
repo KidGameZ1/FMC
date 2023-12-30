@@ -14,19 +14,31 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FMCMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> FMC_TAB = CREATIVE_MODE_TABS.register("fmc_tab",
-            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModBlocks.BLOCK_OF_STORMITE.get())).title(Component.translatable("creativetab.fmc_tab")).displayItems(((itemDisplayParameters, output) ->
+
+    public static final RegistryObject<CreativeModeTab> ELEMENTAL_ORES = CREATIVE_MODE_TABS.register("elemental_ores",
+            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModBlocks.BLOCK_OF_TEMPESTITE.get())).title(Component.translatable("creativetab.elemental_ores")).displayItems(((itemDisplayParameters, output) ->
                     {
-                        //Items
-                        output.accept(ModItems.RAW_STORMITE.get());
-                        output.accept(ModItems.STORMITE.get());
+                        //Ores
+                        output.accept(ModItems.RAW_TEMPESTITE.get());
+                        output.accept(ModItems.TEMPESTITE.get());
+                        output.accept(ModBlocks.BLOCK_OF_TEMPESTITE.get());
+                        output.accept(ModBlocks.DEEPSLATE_TEMPESTITE_ORE.get());
+                        output.accept(ModBlocks.TEMPESTITE_ORE.get());
+
+                        // Other Items
+//                        output.accept(ModItems.ORE_FINDER.get());
+                        output.accept(ModItems.STORM_COAL.get());
+
+
 
                         //Blocks
-                        output.accept(ModBlocks.BLOCK_OF_STORMITE.get());
-                        output.accept(ModBlocks.DEEPSLATE_STORMITE_ORE.get());
-                        output.accept(ModBlocks.STORMITE_ORE.get());
+
+
+
 
                     })).build());
+
+
 
 
 

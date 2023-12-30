@@ -1,0 +1,10 @@
+// 1.20	2023-12-29T20:35:16.4805539	Block States: fmc
+a97c7161ee20565db724534a22149a8ba12a22bf assets/fmc/blockstates/deepslate_tempestite_ore.json
+b53ebc025de5fc6bcd9bed8edbb6a1c3c97557c3 assets/fmc/blockstates/tempestite_block.json
+394b6b15d3bdd4ef980fed7bc5bf933720140db1 assets/fmc/blockstates/tempestite_ore.json
+102a78d029ca83d7a98a86b405b7d17e67dca721 assets/fmc/models/block/deepslate_tempestite_ore.json
+e7e2df7f3965bbc84fcbbe2bea4bca1217c974ea assets/fmc/models/block/tempestite_block.json
+2640e7de26075b525c50a90e06034ef971a2b47c assets/fmc/models/block/tempestite_ore.json
+c5d99543c5c27045dcf2da6465101487d3c124c5 assets/fmc/models/item/deepslate_tempestite_ore.json
+f97f74fe7ff1be4874e9445409c9eaf0198f1ceb assets/fmc/models/item/tempestite_block.json
+3a17db126d8793fd85e6018eeeba8af5a8ede5b8 assets/fmc/models/item/tempestite_ore.json

@@ -5,7 +5,6 @@ import com.ghost.fmc.items.ModCreativeModeTabs;
 import com.ghost.fmc.items.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,6 +18,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
+
+import java.util.AbstractMap;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(FMCMod.MOD_ID)
@@ -35,6 +38,7 @@ public class FMCMod {
         bus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
+
         ModItems.register(bus);
         ModBlocks.register(bus);
         ModCreativeModeTabs.register(bus);
@@ -48,6 +52,13 @@ public class FMCMod {
         LOGGER.info("HELLO FROM COMMON SETUP");
         LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
+
+    private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
+
+    public static void queueServerWork(int tick, Runnable action) {
+        workQueue.add(new AbstractMap.SimpleEntry(action, tick));
+    }
+
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

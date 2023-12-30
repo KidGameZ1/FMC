@@ -1,11 +1,15 @@
 {
-  "item.fmc.stormite": "Stormite",
-  "item.fmc.raw_stormite": "Raw Stormite",
+  "item.fmc.tempestite": "Tempestite",
+  "item.fmc.raw_tempestite": "Raw Tempestite",
+  "item.fmc.ore_finder": "Ore Finder",
+  "item.fmc.storm_coal": "Storm Coal",
+  "item_fmc.ore_finder.no_stormite": "Storm is near",
 
-  "block.fmc.stormite_block": "Block of Stormite",
-  "block.fmc.deepslate_stormite_ore": "Deepslate Stormite Ore",
-  "block.fmc.stormite_ore": "Stormite Ore",
+  "block.fmc.tempestite_block": "Block of Tempestite",
+  "block.fmc.deepslate_tempestite_ore": "Deepslate Tempestite Ore",
+  "block.fmc.tempestite_ore": "Tempestite Ore",
 
 
-  "creativetab.fmc_tab": "FMC Tab"
+  "creativetab.elemental_ores": "Elemental Ores",
+  "creativetab.elemental_fuels": "Elemental Fuels"
 }

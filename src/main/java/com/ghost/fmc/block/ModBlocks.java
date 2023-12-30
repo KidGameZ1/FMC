@@ -23,15 +23,14 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, FMCMod.MOD_ID);
 
-    public static final  RegistryObject<Block> BLOCK_OF_STORMITE = registryBlock("stormite_block",
+    public static final  RegistryObject<Block> BLOCK_OF_TEMPESTITE = registryBlock("tempestite_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
-    public static final  RegistryObject<Block> DEEPSLATE_STORMITE_ORE = registryBlock("deepslate_stormite_ore",
+    public static final  RegistryObject<Block> DEEPSLATE_TEMPESTITE_ORE = registryBlock("deepslate_tempestite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE), UniformInt.of(3,6)));
 
-    public static final  RegistryObject<Block> STORMITE_ORE = registryBlock("stormite_ore",
+    public static final  RegistryObject<Block> TEMPESTITE_ORE = registryBlock("tempestite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE), UniformInt.of(2,5)));
-
     private static <T extends Block> RegistryObject<T> registryBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registryBlockItem(name, toReturn);
