@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "fmc:item/tempestite_sword"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [-35.5, -90, 0],
+      "translation": [0, 5, 2.5],
+      "scale": [1.05, 1.05, 1.05]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [-38.5, 90, 0],
+      "translation": [0, 5, 2],
+      "scale": [1.05, 1.05, 1.05]
+    }
+  }
+}

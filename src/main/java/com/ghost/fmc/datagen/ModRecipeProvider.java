@@ -6,10 +6,12 @@ import com.ghost.fmc.items.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.Iterator;
@@ -38,6 +40,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.BLOCK_OF_TEMPESTITE.get())
                 .unlockedBy("has_tempestite_block",inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModBlocks.BLOCK_OF_TEMPESTITE.get()).build()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.TEMPESTITE_SWORD.get())
+                .pattern("  S")
+                .pattern("SS ")
+                .pattern("NS ")
+                .define('S', ModItems.TEMPESTITE.get())
+                .define('N', Items.NETHERITE_SWORD)
+                .unlockedBy("has_tempestite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.TEMPESTITE.get()).build()))
                 .save(pWriter);
 
 //        nineBlockStorageRecipes(pWriter, RecipeCategory.M);

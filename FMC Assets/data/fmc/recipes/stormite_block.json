@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "stormite",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "fmc:stormite"
+    }
+  },
+  "result": {
+    "item": "fmc:stormite_block"
+  }
+}

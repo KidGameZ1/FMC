@@ -22,8 +22,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SYLVANITE);
 
         simpleItem(ModItems.STORM_COAL);
+        simpleItem(ModItems.FOREST_COAL);
 
-        simpleTools(ModItems.TEMPESTITE_SWORD);
+//        simpleTools(ModItems.TEMPESTITE_SWORD);
+        simpleTools(ModItems.SYLVANITE_AXE);
 //        simpleItem(ModItems.METAL_DETECTOR);
 //        simpleItem(ModItems.PEAT_BRICK);
     }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "fmc:item/tempestite_sword"
+    "layer0": "fmc:item/sylvanite_axe"
   }
 }

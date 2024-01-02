@@ -3,6 +3,7 @@
   "item.fmc.raw_tempestite": "Raw Tempestite",
   "item.fmc.ore_finder": "Ore Finder",
   "item.fmc.storm_coal": "Storm Coal",
+  "item.fmc.forest_coal": "Forest Coal",
   "item.fmc.sylvanite": "Sylvanite",
   "item_fmc.ore_finder.no_tempestite": "Storm is near",
 
@@ -11,6 +12,7 @@
   "block.fmc.tempestite_ore": "Tempestite Ore",
 
   "item.fmc.tempestite_sword": "Tempestite Sword",
+  "item.fmc.sylvanite_axe": "Sylvanite Axe",
 
   "creativetab.elemental_ores": "Elemental Ores",
   "creativetab.elemental_fuels": "Elemental Fuels",

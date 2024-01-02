@@ -6,27 +6,32 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.ItemLike;
 
 public enum ElementalTiers {
-    STORMS(0,"storm", ModItems.TEMPESTITE.get(),200, 2,2, Rarity.create("storm", ChatFormatting.DARK_AQUA)),
-    FLAMES(1,"flames", ModItems.TEMPESTITE.get(),600,2,2,Rarity.create("flames",ChatFormatting.DARK_RED)),
-    FROST(2,"frost", ModItems.TEMPESTITE.get(),100,2,2,Rarity.create("frost", ChatFormatting.AQUA)),
-    HYDRO(3,"hydro",ModItems.TEMPESTITE.get(),0,2,2,Rarity.create("hydro", ChatFormatting.DARK_BLUE)),
-    FORESTS(4,"forest", ModItems.SYLVANITE.get(),100,2,2,Rarity.create("forest",ChatFormatting.DARK_GREEN));
+    STORMS(0,"Storm", ModItems.TEMPESTITE.get(),200, 999,2, Rarity.create("storm", ChatFormatting.DARK_AQUA),ChatFormatting.DARK_AQUA),
+    FLAMES(1,"Flames", ModItems.TEMPESTITE.get(),600,2,2,Rarity.create("flames",ChatFormatting.DARK_RED),ChatFormatting.DARK_RED),
+    FROST(2,"Frost", ModItems.TEMPESTITE.get(),100,2,2,Rarity.create("frost", ChatFormatting.AQUA),ChatFormatting.AQUA),
+    HYDRO(3,"Hydro",ModItems.TEMPESTITE.get(),0,2,2,Rarity.create("hydro", ChatFormatting.DARK_BLUE),ChatFormatting.DARK_BLUE),
+    FORESTS(4,"Forest", ModItems.SYLVANITE.get(),100,2,2,Rarity.create("forest",ChatFormatting.DARK_GREEN),ChatFormatting.DARK_GREEN),
+    GALE(5,"Gale",ModItems.TEMPESTITE.get(),200, 2,2,Rarity.create("gale",ChatFormatting.WHITE),ChatFormatting.WHITE);
     private final int tierId;
     private final String tierName;
     private final ItemLike item;
     private final int burnTime;
     private final int pAttackDamageModifier;
+    private final float pAttackSpeedModifier;
     private final Rarity rarity;
+    private final ChatFormatting tierColor;
 
 
 
-    ElementalTiers(int id, String name, ItemLike item, int burnTime, int pAttackDamageModifier, float pAttackSpeedModifier, Rarity rarity) {
+    ElementalTiers(int id, String name, ItemLike item, int burnTime, int pAttackDamageModifier, float pAttackSpeedModifier, Rarity rarity, ChatFormatting tierColor) {
         this.tierId = id;
         this.tierName = name;
         this.item = item;
         this.burnTime = burnTime;
         this.pAttackDamageModifier = pAttackDamageModifier;
+        this.pAttackSpeedModifier = pAttackSpeedModifier;
         this.rarity = rarity;
+        this.tierColor = tierColor;
     }
 
     public Rarity getRarity() {
@@ -36,7 +41,9 @@ public enum ElementalTiers {
         return pAttackDamageModifier;
     }
 
-
+    public ChatFormatting getTierColor() {
+        return tierColor;
+    }
     public int getTierId() {
         return tierId;
     }
@@ -69,4 +76,7 @@ public enum ElementalTiers {
     }
 
 
+    public float getpAttackSpeedModifier() {
+        return pAttackSpeedModifier;
+    }
 }

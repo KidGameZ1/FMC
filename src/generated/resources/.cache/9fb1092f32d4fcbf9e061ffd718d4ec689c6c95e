@@ -1,4 +1,4 @@
-// 1.20	2023-12-29T21:37:37.4524752	Recipes
+// 1.20	2024-01-01T19:30:53.2079409	Recipes
 9409845980cb3440e70c03bf447b7b0638e21ee5 data/fmc/advancements/recipes/misc/tempestite.json
 af298fd384115a2dddde9921e998986086bea58d data/fmc/advancements/recipes/misc/tempestite_block.json
 333102eccc48f2fcea2929fce7830682fd301104 data/fmc/advancements/recipes/misc/tempestite_from_blasting_deepslate_tempestite_ore.json
@@ -7,6 +7,7 @@ ef10822491891a8a85c9a762c33836c039234dbb data/fmc/advancements/recipes/misc/temp
 2476c0732d89a5bf3414f6968811a7f66989b3e1 data/fmc/advancements/recipes/misc/tempestite_from_smelting_deepslate_tempestite_ore.json
 913fadb8231a473219175626d4d39c5aacf76a4e data/fmc/advancements/recipes/misc/tempestite_from_smelting_raw_tempestite.json
 0d8e119092a40695293c2d00a9b456e594659dec data/fmc/advancements/recipes/misc/tempestite_from_smelting_tempestite_ore.json
+f39607841f8adeee9b31e33bf44bd8780b778172 data/fmc/advancements/recipes/tools/tempestite_sword.json
 1c88244fb7e15f493aa999999c0c5aae8381e6a6 data/fmc/recipes/tempestite.json
 ebf06a187ae8d32409ab39b8d1377dd8488ed5cc data/fmc/recipes/tempestite_block.json
 0e6464881539e3e8d8cdb7e0888d926598be8155 data/fmc/recipes/tempestite_from_blasting_deepslate_tempestite_ore.json
@@ -15,3 +16,4 @@ ebf06a187ae8d32409ab39b8d1377dd8488ed5cc data/fmc/recipes/tempestite_block.json
 9f604d32385379a8b54b0b74545d93743212f22e data/fmc/recipes/tempestite_from_smelting_deepslate_tempestite_ore.json
 1cfb341ca8623c636a185eb72ce25cdc25de5cb6 data/fmc/recipes/tempestite_from_smelting_raw_tempestite.json
 b20d9cddb968c4384c94a6797874ee8c8a70057a data/fmc/recipes/tempestite_from_smelting_tempestite_ore.json
+40123ae63638d366a7d8ca70a3f37e97d59ea9cb data/fmc/recipes/tempestite_sword.json

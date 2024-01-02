@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "fmc:block/stormite_block"
+    }
+  }
+}

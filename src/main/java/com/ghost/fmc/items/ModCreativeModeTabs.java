@@ -32,11 +32,13 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.STORM_COAL.get())).title(Component.translatable("creativetab.elemental_fuels")).displayItems(((itemDisplayParameters, output) ->
             {
                 output.accept(ModItems.STORM_COAL.get());
+                output.accept(ModItems.FOREST_COAL.get());
             })).build());
     public static final RegistryObject<CreativeModeTab> ELEMENTAL_TOOLS = CREATIVE_MODE_TABS.register("elemental_tools",
             () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.TEMPESTITE_SWORD.get())).title(Component.translatable("creativetab.elemental_tools")).displayItems(((itemDisplayParameters, output) ->
             {
                 output.accept(ModItems.TEMPESTITE_SWORD.get());
+                output.accept(ModItems.SYLVANITE_AXE.get());
             })).build());
 
 
